@@ -11,4 +11,9 @@ public class RecycleClothes extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycle_clothes);
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
 }
