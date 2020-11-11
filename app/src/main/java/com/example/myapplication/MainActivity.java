@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    public ImageButton recycleClothes, locateBin;
+    public ImageButton recycleClothes, locateBin, product;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         recycleClothes = findViewById(R.id.main_page_recycle_btn);
         locateBin = findViewById(R.id.main_page_locate_btn);
+        product = findViewById(R.id.main_page_product_btn);
     }
 
     @Override
@@ -42,6 +43,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, LocateLynenBin.class);
+                startActivity(intent);
+            }
+        });
+
+        product.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Product.class);
                 startActivity(intent);
             }
         });

@@ -50,12 +50,11 @@
 
                 <ImageButton
                     android:id="@+id/main_page_product_btn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:background="@null"
-                    android:src="@drawable/rectangle_11">
-                </ImageButton>
+                    android:src="@drawable/rectangle_11"></ImageButton>
 
             </LinearLayout>
 

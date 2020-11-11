@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Lynen</string>
     <string name="title_activity_locate_bin">LocateBin</string>
+    <string name="title_activity_product">Product</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -9,4 +11,26 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+    <!-- payment -->
+    <string name="card_Pay">Card Pay</string>
+    <string name="name_on_card">Name on Card</string>
+    <string name="card_Name">John Doe</string>
+    <string name="card_detail">Card Detail</string>
+    <string name="card_Num">1234 1234 1234 1234</string>
+    <string name="product_name_1">Product Name 1</string>
+    <string name="product_image_1">product_image</string>
+    <string name="paypal_Direct">Paypal Direct</string>
+    <string name="card_Availability">Card Availability</string>
+    <string name="john_doe">John Doe</string>
+    <string name="mm_yyyy">MM/YYYY</string>
+    <string name="cvc">CVC</string>
+
+
+    <!-- product -->
+    <string name="product_1">product_1</string>
+    <string name="product_2">product_2</string>
+    <string name="product_3">product_3</string>
+    <string name="product_4">product_4</string>
 </resources>
