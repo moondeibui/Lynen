@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background= "#eff0f5"
+    tools:context=".ProductNameBlue">
+
+    <ImageView
+        android:id="@+id/product_code_blue"
+        android:layout_width="215dp"
+        android:layout_height="220dp"
+        android:contentDescription="@string/image_blue"
+        android:text="@string/image_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.163"
+        app:srcCompat="@drawable/producttee22" />
+
+    <TextView
+        android:id="@+id/text_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/product_BLUE"
+        android:fontFamily="@font/archivo_black"
+        android:text="@string/product_BLUE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_code_blue"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <TextView
+        android:id="@+id/text_desc_blue"
+        android:layout_width="268dp"
+        android:layout_height="182dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/content_desc"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.728" />
+
+    <ImageButton
+        android:id="@+id/check_out"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/checkout_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.955"
+        app:srcCompat="@drawable/checkout2" />
+
+    <TextView
+        android:id="@+id/total_val"
+        android:layout_width="104dp"
+        android:layout_height="18dp"
+        android:contentDescription="@string/total"
+        android:text="@string/total"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/check_out"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.942" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

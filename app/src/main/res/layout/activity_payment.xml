@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background= "#eff0f4"
     tools:context=".Payment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,31 +15,33 @@
 
         <ImageView
             android:id="@+id/product_Image_1"
-            android:layout_width="197dp"
-            android:layout_height="146dp"
+            android:layout_width="203dp"
+            android:layout_height="165dp"
             android:contentDescription="@string/product_image_1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.104"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@drawable/white_main" />
 
         <TextView
             android:id="@+id/product_Name_1"
-            android:layout_width="99dp"
-            android:layout_height="19dp"
+            android:layout_width="114dp"
+            android:layout_height="28dp"
+            android:fontFamily="sans-serif-black"
             android:text="@string/product_name_1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/product_Image_1"
-            app:layout_constraintVertical_bias="0.08" />
+            app:layout_constraintVertical_bias="0.048" />
 
         <ImageButton
             android:id="@+id/paypal_Direct_Button"
-            android:layout_width="288dp"
-            android:layout_height="44dp"
+            android:layout_width="314dp"
+            android:layout_height="33dp"
             android:contentDescription="@string/paypal_Direct"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -66,6 +69,7 @@
             android:layout_height="23dp"
             android:layout_marginTop="8dp"
             android:contentDescription="@string/card_detail"
+            android:fontFamily="sans-serif-black"
             android:text="@string/card_detail"
             app:layout_constraintBottom_toTopOf="@+id/input_card_Num"
             app:layout_constraintEnd_toEndOf="parent"
@@ -143,27 +147,27 @@
 
         <TextView
             android:id="@+id/card_Name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="99dp"
+            android:layout_height="22dp"
+            android:fontFamily="sans-serif-black"
             android:text="@string/name_on_card"
             app:layout_constraintBottom_toTopOf="@+id/input_card_Name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.158"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/card_Date"
-            app:layout_constraintVertical_bias="0.611" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <ImageButton
             android:id="@+id/card_PayNow_button"
-            android:layout_width="288dp"
-            android:layout_height="44dp"
+            android:layout_width="314dp"
+            android:layout_height="33dp"
             android:contentDescription="@string/card_Pay"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.937"
+            app:layout_constraintVertical_bias="0.951"
             app:srcCompat="@drawable/paynow_d2" />
 
         <View

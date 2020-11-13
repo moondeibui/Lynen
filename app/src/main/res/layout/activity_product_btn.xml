@@ -5,56 +5,115 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/home_page__1"
-    tools:context=".Product">
+    tools:context=".MainProduct">
 
 
+        <TextView
+            android:id="@+id/product_text_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:fontFamily="@font/archivo_black"
+            android:text="@string/product_text_blue"
+            app:layout_constraintBottom_toTopOf="@+id/product_image_clay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_image_blue"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/text_coming_soon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="76dp"
+            android:layout_marginRight="76dp"
+            android:fontFamily="@font/archivo_black"
+            android:text="@string/main_soon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_image_coming_soon"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/product_text_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/archivo_black"
+            android:text="@string/product_text_white"
+            app:layout_constraintBottom_toTopOf="@+id/product_image_coming_soon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintStart_toEndOf="@+id/product_text_blue"
+            app:layout_constraintTop_toBottomOf="@+id/product_image_white"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/product_text_clay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/archivo_black"
+            android:text="@string/product_text_clay"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/text_coming_soon"
+            app:layout_constraintHorizontal_bias="0.535"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_image_clay"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageButton
-            android:id="@+id/product_3"
+            android:id="@+id/product_image_clay"
             android:layout_width="140dp"
             android:layout_height="240dp"
             android:layout_marginStart="50dp"
             android:layout_marginLeft="50dp"
             android:layout_marginBottom="100dp"
-            android:contentDescription="@string/product_3"
+            android:background="#FFFFFF"
+            android:contentDescription="@string/product_image_clay"
+            android:src="@drawable/clay_main"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:src="@drawable/clay_main" />
 
         <ImageButton
-            android:id="@+id/product_2"
+            android:id="@+id/product_image_white"
             android:layout_width="140dp"
             android:layout_height="240dp"
             android:layout_marginTop="100dp"
             android:layout_marginEnd="50dp"
             android:layout_marginRight="50dp"
-            android:contentDescription="@string/product_2"
+            android:background="#FFFFFF"
+            android:contentDescription="@string/product_image_white"
+            android:src="@drawable/white_main"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:src="@drawable/white_main" />
 
         <ImageButton
-            android:id="@+id/product_4"
+            android:id="@+id/product_image_coming_soon"
             android:layout_width="140dp"
             android:layout_height="240dp"
             android:layout_marginEnd="50dp"
             android:layout_marginRight="50dp"
             android:layout_marginBottom="100dp"
-            android:contentDescription="@string/product_4"
+            android:background="#FDFCFC"
+            android:contentDescription="@string/main_soon"
+            android:src="@drawable/main_soon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:src="@drawable/main_soon" />
 
         <ImageButton
-            android:id="@+id/product_1"
+            android:id="@+id/product_image_blue"
             android:layout_width="140dp"
             android:layout_height="240dp"
             android:layout_marginStart="50dp"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="100dp"
-            android:contentDescription="@string/product_1"
+            android:background="#FFFFFF"
+            android:contentDescription="@string/product_image_blue"
+            android:src="@drawable/blue_main"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:src="@drawable/blue_main" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
