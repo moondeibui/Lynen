@@ -104,6 +104,14 @@
                     android:layout_marginLeft="120dp"
                     app:srcCompat="@drawable/rectangle96" />
 
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/Post" />
+
             </FrameLayout>
         </LinearLayout>
 
