@@ -4,7 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/recycle_clothes_page"
     tools:context=".RecycleClothes">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recycle_clothes_cardview"
+        android:layout_width="300dp"
+        android:layout_height="600dp"
+        android:visibility="invisible"
+        android:layout_marginTop="40dp"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/recycle_clothes_photo_imgview"
+            android:layout_width="500dp"
+            android:layout_height="500dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="7dp"
+            android:elevation="5dp"
+            />
+
+        <ImageView
+            android:id="@+id/recycle_clothes_close_pop_up_imgview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:elevation="5dp"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_baseline_close_24"
+            />
+    </androidx.cardview.widget.CardView>
 
     <ImageButton
         android:id="@+id/camera_btn"
@@ -17,5 +52,17 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></ImageButton>
+
+    <Button
+        android:id="@+id/test_pop_up_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recycle_clothes_cardview"
+        app:layout_constraintVertical_bias="0.948"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
