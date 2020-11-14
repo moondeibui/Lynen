@@ -81,7 +81,7 @@
                         android:layout_height="537dp"
                         android:ems="10"
                         android:inputType="textMultiLine"
-                        android:text="Thread" />
+                        android:text="Start writing here" />
                 </FrameLayout>
 
             </FrameLayout>
@@ -100,16 +100,16 @@
                     android:id="@+id/imageButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="250dp"
                     android:background="none"
-                    android:layout_marginLeft="120dp"
                     app:srcCompat="@drawable/rectangle96" />
 
                 <ImageView
                     android:id="@+id/imageView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
                     android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="250dp"
                     app:srcCompat="@drawable/Post" />
 
             </FrameLayout>
