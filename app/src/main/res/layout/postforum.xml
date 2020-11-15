@@ -110,7 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="250dp"
-                    app:srcCompat="@drawable/Post" />
+                    app:srcCompat="@drawable/post" />
 
             </FrameLayout>
         </LinearLayout>
