@@ -18,8 +18,10 @@ import java.io.FileNotFoundException;
 public class ShowCapturedActivity extends AppCompatActivity {
 
     Bitmap bitmap;
-    SpinnerActivity spinnerActivity;
-    Spinner clothesTypeSpinner;
+    ClothesTypeSpinnerActivity clothesTypeSpinnerActivity;
+    ClothesMaterialSpinnerActivity clothesMaterialSpinnerActivity;
+    ClothesGenderSpinnerActivity clothesGenderSpinnerActivity;
+    Spinner clothesTypeSpinner, clothesMaterialSpinner, clothesGenderSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +39,11 @@ public class ShowCapturedActivity extends AppCompatActivity {
         ImageView mImage = findViewById(R.id.image_captured);
         mImage.setImageBitmap(bitmap);
 
-        spinnerActivity = new SpinnerActivity();
+        /*Clothes Type Spinner*/
+        clothesTypeSpinnerActivity = new ClothesTypeSpinnerActivity();
 
         clothesTypeSpinner = findViewById(R.id.clothes_type_spinner);
-        clothesTypeSpinner.setOnItemSelectedListener(spinnerActivity);
+        clothesTypeSpinner.setOnItemSelectedListener(clothesTypeSpinnerActivity);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.clothes_type_array, android.R.layout.simple_spinner_item);
@@ -48,6 +51,34 @@ public class ShowCapturedActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         clothesTypeSpinner.setAdapter(adapter);
+
+
+        /*Clothes Material Spinner*/
+        clothesMaterialSpinnerActivity = new ClothesMaterialSpinnerActivity();
+
+        clothesMaterialSpinner = findViewById(R.id.clothes_material_spinner);
+        clothesMaterialSpinner.setOnItemSelectedListener(clothesMaterialSpinnerActivity);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
+                R.array.clothes_material_array, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        clothesMaterialSpinner.setAdapter(adapter2);
+
+
+        /*Clothes Gender Spinner*/
+        clothesGenderSpinnerActivity = new ClothesGenderSpinnerActivity();
+
+        clothesGenderSpinner = findViewById(R.id.clothes_gender_spinner);
+        clothesGenderSpinner.setOnItemSelectedListener(clothesGenderSpinnerActivity);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this,
+                R.array.clothes_gender_array, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        clothesGenderSpinner.setAdapter(adapter3);
     }
 
     private Bitmap rotate(Bitmap decodeBitmap) {
@@ -59,4 +90,44 @@ public class ShowCapturedActivity extends AppCompatActivity {
 
         return Bitmap.createBitmap(decodeBitmap, 0, 0, w, h, matrix, true);
     }
+
+    public class ClothesTypeSpinnerActivity extends Activity implements AdapterView.OnItemSelectedListener {
+
+        public void onItemSelected(AdapterView<?> parent, View view,
+                                   int pos, long id) {
+            // An item was selected. You can retrieve the selected item using
+            // parent.getItemAtPosition(pos)
+        }
+
+        public void onNothingSelected(AdapterView<?> parent) {
+            // Another interface callback
+        }
+    }
+
+    public class ClothesMaterialSpinnerActivity extends Activity implements AdapterView.OnItemSelectedListener {
+
+        public void onItemSelected(AdapterView<?> parent, View view,
+                                   int pos, long id) {
+            // An item was selected. You can retrieve the selected item using
+            // parent.getItemAtPosition(pos)
+        }
+
+        public void onNothingSelected(AdapterView<?> parent) {
+            // Another interface callback
+        }
+    }
+
+    public class ClothesGenderSpinnerActivity extends Activity implements AdapterView.OnItemSelectedListener {
+
+        public void onItemSelected(AdapterView<?> parent, View view,
+                                   int pos, long id) {
+            // An item was selected. You can retrieve the selected item using
+            // parent.getItemAtPosition(pos)
+        }
+
+        public void onNothingSelected(AdapterView<?> parent) {
+            // Another interface callback
+        }
+    }
+
 }

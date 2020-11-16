@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="clothes_material_array">
+        <item>Cotton</item>
+        <item>Wool</item>
+        <item>Silk</item>
+        <item>Leather</item>
+        <item>Cotton n Wool</item>
+        <item>Cotton n Silk</item>
+        <item>Wool n Silk</item>
+        <item>Tailored Clothing</item>
+    </string-array>
+</resources>
