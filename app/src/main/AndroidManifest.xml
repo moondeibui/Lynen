@@ -7,6 +7,9 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the "MyLocation" functionality.
     -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera2" />
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
@@ -47,6 +50,13 @@
         <uses-library android:name="com.google.android.maps"/>
 
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ShowCapturedActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

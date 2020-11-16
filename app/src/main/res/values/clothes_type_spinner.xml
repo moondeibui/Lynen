@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="clothes_type_array">
+        <item>Oversize</item>
+        <item>Plain Tee</item>
+        <item>Active Wear</item>
+        <item>Casual Wear</item>
+        <item>Outer Wear</item>
+        <item>Swim Wear</item>
+        <item>Tailored Clothing</item>
+    </string-array>
+</resources>
