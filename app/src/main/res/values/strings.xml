@@ -1,8 +1,6 @@
 <resources>
     <string name="app_name">Lynen</string>
     <string name="title_activity_locate_bin">LocateBin</string>
-    <string name="title_activity_product">Product</string>
-
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -11,7 +9,6 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-
 
     <!-- payment -->
     <string name="card_Pay">Card Pay</string>
@@ -59,6 +56,5 @@
     <string name="content_desc2">This product is made from recycle material. The sizing for this product is FREE SIZE</string>
     <string name="checkout_button2">checkout_button</string>
     <string name="total2">TOTAL: RM 30</string>
-
 
 </resources>
