@@ -16,8 +16,12 @@
     <string name="card_Name">John Doe</string>
     <string name="card_detail">Card Detail</string>
     <string name="card_Num">1234 1234 1234 1234</string>
+    <string name="product_name">Product Name</string>
+    <string name="product_image">product_image</string>
     <string name="product_name_1">Product Name 1</string>
-    <string name="product_image_1">product_image</string>
+    <string name="product_image_1">product_image_1</string>
+    <string name="product_name_2">Product Name 2</string>
+    <string name="product_image_2">product_image_2</string>
     <string name="paypal_Direct">Paypal Direct</string>
     <string name="card_Availability">Card Availability</string>
     <string name="john_doe">John Doe</string>
@@ -56,5 +60,9 @@
     <string name="content_desc2">This product is made from recycle material. The sizing for this product is FREE SIZE</string>
     <string name="checkout_button2">checkout_button</string>
     <string name="total2">TOTAL: RM 30</string>
+    <string name="title_activity_sign_up">signUp</string>
+
+    <!-- payment blue -->
+
 
 </resources>

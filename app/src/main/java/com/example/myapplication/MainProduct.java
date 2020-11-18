@@ -35,7 +35,7 @@ public class MainProduct extends AppCompatActivity {
 
         white.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent intent = new Intent(MainProduct.this, ProductNameWhite.class);
                 startActivity(intent);
             }

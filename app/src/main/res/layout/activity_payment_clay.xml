@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background= "#eff0f4"
+    tools:context=".PaymentClay">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_payment_clay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="-33dp">
+
+        <ImageView
+            android:id="@+id/product_Image_2"
+            android:layout_width="203dp"
+            android:layout_height="165dp"
+            android:contentDescription="@string/product_image_clay"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.104"
+            tools:srcCompat="@drawable/clay_main" />
+
+        <TextView
+            android:id="@+id/product_Name_2"
+            android:layout_width="114dp"
+            android:layout_height="28dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/product_name_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_Image_2"
+            app:layout_constraintVertical_bias="0.048" />
+
+        <ImageButton
+            android:id="@+id/paypal_Direct_Button"
+            android:layout_width="314dp"
+            android:layout_height="33dp"
+            android:contentDescription="@string/paypal_Direct"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_Name_2"
+            app:layout_constraintVertical_bias="0.079"
+            app:srcCompat="@drawable/paypal" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_card_Num"
+            android:layout_width="234dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="4dp"
+            android:hint="@string/card_Num"
+            android:inputType="number"
+            android:text="@string/card_Num"
+            app:layout_constraintBottom_toTopOf="@+id/card_Date"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/card_Detail"
+            android:layout_width="90dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/card_detail"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/card_detail"
+            app:layout_constraintBottom_toTopOf="@+id/input_card_Num"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.155"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/paypal_Direct_Button"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/card_availability"
+            android:layout_width="110dp"
+            android:layout_height="24dp"
+            android:contentDescription="@string/card_Availability"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.117"
+            app:layout_constraintStart_toEndOf="@+id/input_card_Num"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.62"
+            app:srcCompat="@drawable/card" />
+
+        <EditText
+            android:id="@+id/card_Date"
+            android:layout_width="155dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="476dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:hint="@string/mm_yyyy"
+            android:inputType="date"
+            android:textColor="#79121212"
+            android:textIsSelectable="false"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/input_CVC"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/input_CVC"
+            android:layout_width="157dp"
+            android:layout_height="46dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/cvc"
+            android:inputType="number"
+            android:textColor="#85121212"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.811"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.694" />
+
+        <EditText
+            android:id="@+id/input_card_Name"
+            android:layout_width="236dp"
+            android:layout_height="43dp"
+            android:autofillHints="John Doe"
+            android:ems="10"
+            android:hint="@string/john_doe"
+            android:inputType="textPersonName"
+            android:textColor="#7D070707"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.285"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_Date"
+            app:layout_constraintVertical_bias="0.254" />
+
+        <TextView
+            android:id="@+id/card_Name"
+            android:layout_width="99dp"
+            android:layout_height="22dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/name_on_card"
+            app:layout_constraintBottom_toTopOf="@+id/input_card_Name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.158"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_Date"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageButton
+            android:id="@+id/card_PayNow_button"
+            android:layout_width="314dp"
+            android:layout_height="33dp"
+            android:contentDescription="@string/card_Pay"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.951"
+            app:srcCompat="@drawable/paynow_d2" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.512"
+            tools:layout_editor_absoluteX="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
