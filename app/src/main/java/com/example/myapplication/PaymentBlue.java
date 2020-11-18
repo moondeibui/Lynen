@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class PaymentBlue extends AppCompatActivity {
 
-    public ImageButton payment,paypal;
+    public ImageButton paypal;
+    Button payment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

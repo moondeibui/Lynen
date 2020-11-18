@@ -19,18 +19,6 @@
         app:layout_constraintVertical_bias="0.282"
         app:srcCompat="@drawable/paymentss" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="318dp"
-        android:layout_height="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.857"
-        app:srcCompat="@drawable/hompage22" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="245dp"
@@ -45,6 +33,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.133" />
+        app:layout_constraintVertical_bias="0.145" />
+
+    <Button
+        android:id="@+id/payment_home"
+        android:layout_width="295dp"
+        android:layout_height="52dp"
+        android:background="#FFFFFF"
+        android:text="BACK TO HOME"
+        app:backgroundTint="#23CF26"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.902" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

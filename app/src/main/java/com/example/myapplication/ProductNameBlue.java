@@ -4,13 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import android.os.Bundle;
 
 public class ProductNameBlue extends AppCompatActivity {
 
-    public ImageButton checkout;
+    public Button checkout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
