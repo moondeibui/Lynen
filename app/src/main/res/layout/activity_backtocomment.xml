@@ -42,7 +42,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@null"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="50dp"
                     android:layout_gravity="center_vertical"
                     app:srcCompat="@drawable/rectangle102" />
 

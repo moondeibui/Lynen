@@ -202,7 +202,7 @@ public class forum extends AppCompatActivity {
 
     public void openActivity2() {
 
-        Intent intent = new Intent ( this, backtocomment.class) ;
+        Intent intent = new Intent ( this, postcomment.class) ;
 
         startActivity(intent) ;
     }
