@@ -13,4 +13,56 @@
     <string name="cancel">Cancel</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+
+    <!-- payment -->
+    <string name="card_Pay">Card Pay</string>
+    <string name="name_on_card">Name on Card</string>
+    <string name="card_Name">John Doe</string>
+    <string name="card_detail">Card Detail</string>
+    <string name="card_Num">1234 1234 1234 1234</string>
+    <string name="product_name"> Product "BLUE"</string>
+    <string name="product_image">product_image</string>
+    <string name="product_name_1"> Product "WHITE"</string>
+    <string name="product_image_1">product_image_1</string>
+    <string name="product_name_2"> Product "CLAY"</string>
+    <string name="product_image_2">product_image_2</string>
+    <string name="paypal_Direct">Paypal Direct</string>
+    <string name="card_Availability">Card Availability</string>
+    <string name="john_doe">John Doe</string>
+    <string name="mm_yyyy">MM/YYYY</string>
+    <string name="cvc">CVC</string>
+
+
+    <!-- product -->
+    <string name="product_image_blue">product_image_blue</string>
+    <string name="product_image_white">product_image_white</string>
+    <string name="product_image_clay">product_image_clay</string>
+    <string name="main_soon">coming soon</string>
+    <string name="product_text_blue">Product "BLUE"</string>
+    <string name="product_text_white">Product "WHITE"</string>
+    <string name="product_text_clay">Product "CLAY"</string>
+
+    <!-- product blue -->
+    <string name="product_BLUE">Product "BLUE"</string>
+    <string name="content_desc">This product is made from recycle material. The sizing for this product is FREE SIZE</string>
+    <string name="checkout_button">checkout_button</string>
+    <string name="total">TOTAL: RM 30</string>
+    <string name="image_blue">image_blue</string>
+
+
+    <!-- product white -->
+    <string name="product_WHITE">Product "WHITE"</string>
+    <string name="image_white">image_white</string>
+    <string name="content_desc1">This product is made from recycle material. The sizing for this product is FREE SIZE</string>
+    <string name="checkout_button1">checkout_button</string>
+    <string name="total1">TOTAL: RM 30</string>
+
+
+    <!-- product clay -->
+    <string name="product_CLAY">Product "CLAY"</string>
+    <string name="image_clay">image_clay</string>
+    <string name="content_desc2">This product is made from recycle material. The sizing for this product is FREE SIZE</string>
+    <string name="checkout_button2">checkout_button</string>
+    <string name="total2">TOTAL: RM 30</string>
+    <string name="title_activity_sign_up">signUp</string>
 </resources>

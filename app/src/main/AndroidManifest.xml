@@ -67,6 +67,33 @@
         <activity
             android:name=".LocateLynenBin"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainProduct"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".loginPage"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SignUp"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".StatisticsMalaysia"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".StatisticsSingapore"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PaymentBlue"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PaymentWhite"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PaymentClay"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PaymentSuccess"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>
