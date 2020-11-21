@@ -10,6 +10,8 @@ import android.widget.ImageButton;
 public class MainActivity extends AppCompatActivity {
 
     public ImageButton recycleClothes, locateBin, product;
+    public ImageButton forum;
+    public ImageButton adoptbin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,34 +21,53 @@ public class MainActivity extends AppCompatActivity {
         recycleClothes = findViewById(R.id.main_page_recycle_btn);
         locateBin = findViewById(R.id.main_page_locate_btn);
         product = findViewById(R.id.main_page_product_btn);
-    }
+        forum = findViewById(R.id.main_page_community_faqs_btn);
+        adoptbin = findViewById (R.id.main_page_adopt_bin_btn);
+//
+//        @Override
+//        protected void onStart () {
+//            super.onStart();
 
-    @Override
-    protected void onStart() {
-        super.onStart();
+            recycleClothes.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(MainActivity.this, RecycleClothes.class);
+                    startActivity(intent);
+                }
+            });
 
-        recycleClothes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, RecycleClothes.class);
-                startActivity(intent);
-            }
-        });
+            locateBin.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(MainActivity.this, LocateLynenBin.class);
+                    startActivity(intent);
+                }
+            });
 
-        locateBin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, LocateLynenBin.class);
-                startActivity(intent);
-            }
-        });
+            product.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(MainActivity.this, MainProduct.class);
+                    startActivity(intent);
+                }
+            });
 
-        product.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MainProduct.class);
-                startActivity(intent);
-            }
-        });
-    }
+            forum.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick (View view){
+                    Intent intent = new Intent (MainActivity.this, forum.class);
+                }
+            });
+            adoptbin.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent (MainActivity.this, adoptbin.class);
+                }
+            });
+
+
+        }
 }
+
+
+

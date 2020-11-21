@@ -7,9 +7,7 @@
     tools:context=".adoptbin2">
 
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/forumpage">
@@ -59,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/imageView25"
             android:layout_marginTop="318dp"
-            android:background="none"
+            android:background="@null"
             android:layout_marginLeft="60dp"
             app:srcCompat="@drawable/rectangle203" />
 
@@ -78,17 +76,18 @@
             android:layout_below="@id/imageView25"
             android:layout_marginLeft="230dp"
             android:layout_marginTop="319dp"
-            android:background="none"
+            android:background="@null"
             app:srcCompat="@drawable/rectangle205" />
 
         <ImageView
-            android:id="@+id/imageView28"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/imageView25"
-            android:layout_marginTop="353dp"
-            android:layout_marginLeft="165dp"
-            app:srcCompat="@drawable/No" />
+            android:id="@+id/imageView6"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_alignBottom="@+id/imageView25"
+            android:layout_marginLeft="250dp"
+            android:layout_marginBottom="-403dp"
+            app:srcCompat="@drawable/button" />
+
 
     </RelativeLayout>
 

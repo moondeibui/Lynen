@@ -7,7 +7,6 @@
     tools:context=".forum">
 
 
-    <?xml version="1.0" encoding="utf-8"?>
     <ScrollView
         android:id="@+id/main_pg_main_linear_layout"
         android:layout_width="match_parent"
@@ -96,7 +95,7 @@
                                 android:id="@+id/imageButton8"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background= "none"
+                                android:background= "@null"
                                 android:layout_gravity="center"
                                 app:srcCompat="@drawable/rectangle96" />
 
@@ -111,7 +110,7 @@
                                 android:id="@+id/imageButton12"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="none"
+                                android:background="@null"
                                 android:layout_marginLeft="250dp"
                                 android:layout_gravity="bottom"
                                 app:srcCompat="@drawable/roundbutton" />

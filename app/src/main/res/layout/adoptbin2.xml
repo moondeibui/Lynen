@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView25"
         android:layout_marginTop="318dp"
-        android:background="none"
+        android:background="@null"
         android:layout_marginLeft="60dp"
         app:srcCompat="@drawable/rectangle203" />
 
@@ -69,7 +69,7 @@
         android:layout_below="@id/imageView25"
         android:layout_marginLeft="230dp"
         android:layout_marginTop="319dp"
-        android:background="none"
+        android:background="@null"
         app:srcCompat="@drawable/rectangle205" />
 
     <ImageView
