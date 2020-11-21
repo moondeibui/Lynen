@@ -1,8 +1,10 @@
 package com.example.myapplication;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
@@ -10,23 +12,50 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 
 public class ShowCapturedActivity extends AppCompatActivity {
+
+    DatabaseHelper myDb;
 
     Bitmap bitmap;
     ClothesTypeSpinnerActivity clothesTypeSpinnerActivity;
     ClothesMaterialSpinnerActivity clothesMaterialSpinnerActivity;
     ClothesGenderSpinnerActivity clothesGenderSpinnerActivity;
     Spinner clothesTypeSpinner, clothesMaterialSpinner, clothesGenderSpinner;
+    ImageButton submitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_captured);
+
+        myDb = new DatabaseHelper(this);
+
+        // Dialog Back to Home
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AlertDialogTheme);
+
+        // 2. Chain together various setter methods to set the dialog characteristics
+        builder.setMessage("You have successfully submitted you clothing.")
+                .setTitle("Submitted Successfully");
+
+        builder.setPositiveButton(R.string.back_home, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                Intent intent = new Intent(ShowCapturedActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // 3. Get the <code><a href="/reference/android/app/AlertDialog.html">AlertDialog</a></code> from <code><a href="/reference/android/app/AlertDialog.Builder.html#create()">create()</a></code>
+        AlertDialog dialogHome = builder.create();
+
 
         try {
             bitmap = BitmapFactory.decodeStream(getApplication().openFileInput("imageToSend"));
@@ -39,17 +68,48 @@ public class ShowCapturedActivity extends AppCompatActivity {
         ImageView mImage = findViewById(R.id.image_captured);
         mImage.setImageBitmap(bitmap);
 
+        // Convert to Bitmap
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+        byte imageInByte[] = stream.toByteArray();
+
+        // Confirmation Dialog
+        AlertDialog.Builder builder2 = new AlertDialog.Builder(this, R.style.AlertDialogTheme);
+
+        // 2. Chain together various setter methods to set the dialog characteristics
+        builder2.setMessage("Please confirm if you would like to recycle your clothes.")
+                .setTitle("Confirmation");
+
+        builder2.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                String type = clothesTypeSpinner.getSelectedItem().toString();
+                String material = clothesMaterialSpinner.getSelectedItem().toString();
+                String gender = clothesGenderSpinner.getSelectedItem().toString();
+                boolean isInserted = myDb.insertData(type,material,gender,imageInByte);
+                if (isInserted == true){
+                    Toast.makeText(ShowCapturedActivity.this, "Submitted!", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(ShowCapturedActivity.this, "NOT Submitted!", Toast.LENGTH_SHORT).show();
+                }
+                dialogHome.show();
+            }
+        });
+        builder2.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.cancel();
+            }
+        });
+        // 3. Get the <code><a href="/reference/android/app/AlertDialog.html">AlertDialog</a></code> from <code><a href="/reference/android/app/AlertDialog.Builder.html#create()">create()</a></code>
+        AlertDialog dialogConfirm = builder2.create();
+
         /*Clothes Type Spinner*/
         clothesTypeSpinnerActivity = new ClothesTypeSpinnerActivity();
 
         clothesTypeSpinner = findViewById(R.id.clothes_type_spinner);
         clothesTypeSpinner.setOnItemSelectedListener(clothesTypeSpinnerActivity);
-        // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.clothes_type_array, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
         clothesTypeSpinner.setAdapter(adapter);
 
 
@@ -58,12 +118,9 @@ public class ShowCapturedActivity extends AppCompatActivity {
 
         clothesMaterialSpinner = findViewById(R.id.clothes_material_spinner);
         clothesMaterialSpinner.setOnItemSelectedListener(clothesMaterialSpinnerActivity);
-        // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
                 R.array.clothes_material_array, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
         clothesMaterialSpinner.setAdapter(adapter2);
 
 
@@ -72,13 +129,18 @@ public class ShowCapturedActivity extends AppCompatActivity {
 
         clothesGenderSpinner = findViewById(R.id.clothes_gender_spinner);
         clothesGenderSpinner.setOnItemSelectedListener(clothesGenderSpinnerActivity);
-        // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this,
                 R.array.clothes_gender_array, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
         clothesGenderSpinner.setAdapter(adapter3);
+
+        submitButton = findViewById(R.id.show_capture_submit_button);
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialogConfirm.show();
+            }
+        });
     }
 
     private Bitmap rotate(Bitmap decodeBitmap) {

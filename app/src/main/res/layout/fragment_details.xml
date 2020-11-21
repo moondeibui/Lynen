@@ -1,13 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="details fragment"
-        android:gravity="center"/>
+    <ImageView
+        android:id="@+id/imgview_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_gravity="top"
+        android:background="@null"
+        android:src="@drawable/instruction"/>
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/imgview_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_below="@+id/imgview_0"
+        android:background="@null"
+        android:src="@drawable/instruction_1"/>
+
+    <ImageView
+        android:id="@+id/imgview_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgview_1"
+        android:layout_margin="30dp"
+        android:background="@null"
+        android:src="@drawable/instruction_2"/>
+
+    <ImageView
+        android:id="@+id/imgview_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_below="@+id/imgview_2"
+        android:background="@null"
+        android:src="@drawable/instruction_3"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_below="@+id/imgview_3"
+        android:background="@null"
+        android:src="@drawable/instruction_4"/>
+
+</RelativeLayout>
