@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".anotheractivity">
+    tools:context=".postforum">
+
 
     <?xml version="1.0" encoding="utf-8"?>
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background= "@drawable/forumpage">
@@ -113,17 +113,19 @@
                         app:srcCompat="@drawable/rectangle96" />
 
                     <ImageView
-                        android:id="@+id/imageView6"
+                        android:id="@+id/imageView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="50dp"
                         android:layout_gravity="center_vertical"
-                        app:srcCompat="@drawable/post" />
+                        app:srcCompat="@drawable/postforum" />
+
 
                 </FrameLayout>
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

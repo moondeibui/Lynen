@@ -30,10 +30,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".backtocomment"></activity>
+        <activity android:name=".forum"></activity>
+        <activity android:name=".postforum" />
+        <activity android:name=".adoptbin2" />
+        <activity android:name=".adoptbin" />
+        <activity android:name=".backtocomment" />
         <activity android:name=".postcomment" />
         <activity android:name=".backtoforum" />
-        <activity android:name=".anotheractivity" />
 
         <meta-data
             android:name="com.google.android.gms.version"

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adoptbin">
+
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/forumpage">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/rectangle61" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName17"
+            android:layout_width="389dp"
+            android:layout_height="87dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="FullName" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName20"
+            android:layout_width="389dp"
+            android:layout_height="87dp"
+            android:layout_below="@id/editTextTextPersonName17"
+            android:ems="10"
+            android:inputType="number"
+            android:text="IC" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName21"
+            android:layout_width="389dp"
+            android:layout_height="87dp"
+            android:layout_below="@id/editTextTextPersonName20"
+            android:layout_marginTop="-1dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Gender" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName27"
+            android:layout_width="389dp"
+            android:layout_height="87dp"
+            android:layout_below="@id/editTextTextPersonName21"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:text="Address" />
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="389dp"
+            android:layout_height="87dp"
+            android:layout_below="@id/editTextTextPersonName27"
+            android:ems="10"
+            android:inputType="phone"
+            android:text="Phone" />
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress2"
+            android:layout_width="389dp"
+            android:layout_height="87dp"
+            android:layout_below="@id/editTextPhone"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:text="Email" />
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextTextEmailAddress2"
+            android:layout_marginTop="65dp"
+            android:layout_marginLeft="30dp"
+            android:background="none"
+            app:srcCompat="@drawable/rectangle208" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextTextEmailAddress2"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="88dp"
+            app:srcCompat="@drawable/adoptbin" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

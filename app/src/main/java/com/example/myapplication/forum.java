@@ -1,19 +1,21 @@
 package com.example.myapplication;
 
-import android.os.Bundle;
-import android.widget.ExpandableListView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import android.app.AlertDialog;
+import android.content.Intent;
+import android.database.Cursor;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 public class forum extends AppCompatActivity {
 
-    ExpandableListView expandableListView ;
+    DatabaseHelper myDb;
 
-    ArrayList<String> thelist = new ArrrayList < > ( ) ;
-    HashMap<String,ArrayList <String>> thechild = new HashMap < > ( ) ;
+    private ImageButton imageButton ;
+
+    ImageButton forum ;
 
 
 
@@ -22,14 +24,84 @@ public class forum extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_forum);
 
-        expandableListView = findViewById (R.id.expanded_menu) ;
+        myDb = new DatabaseHelper (this) ;
+
+        forum = (ImageButton) findViewById (R.id.imageButton8) ;
+
+        imageButton = (ImageButton) findViewById (R.id.imageButton12) ;
+
+
+
+        forum.setOnClickListener(new View.OnClickListener () {
+            @Override
+            public void onClick (View v) {
+                Cursor res = myDb.getAllData();
+                if (res.getCount() == 0) {
+
+                    showMessage ("Error", "Nothing Found") ;
+                    return ;
+                }
+                StringBuffer buffer = new StringBuffer () ;
+                while ( res.moveToNext()) {
+                    buffer.append ("ID " + res.getString(0) +"\n") ;
+                    buffer.append ("Thread_title " + res.getString (1) +"\n") ;
+                    buffer.append ("Thread" + res.getString (3) + "\n") ;
+                }
+
+                showMessage("Forum", buffer.toString()) ;
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+        imageButton.setOnClickListener(new View.OnClickListener () {
+
+
+
+
+            @Override
+            public void onClick (View theview ) {
+
+                openActivity2() ;
+
+            }
+        });
+
+
+
 
 
 
     }
 
+    public void openActivity2 () {
+
+        Intent intent = new Intent ( this, postforum.class) ;
+
+        startActivity(intent) ;
+
+    }
+
+    public void  showMessage (String title , String Message ) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder (this) ;
+
+        builder.setCancelable (true) ;
+        builder.setTitle (title) ;
+        builder.setMessage (Message) ;
+        builder.show () ;
 
 
+
+
+    }
 }
