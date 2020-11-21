@@ -7,7 +7,12 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ExpandableListView;
 import android.widget.ImageButton;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class forum extends AppCompatActivity {
 
@@ -16,6 +21,14 @@ public class forum extends AppCompatActivity {
     ImageButton imageButton ;
 
     ImageButton forum ;
+
+    ImageButton postcomment ;
+
+    private static ExpandableListView expandableListView ;
+    private static ExpandableListAdapter adapter ;
+
+
+
 
 
 
@@ -31,6 +44,17 @@ public class forum extends AppCompatActivity {
         forum = (ImageButton) findViewById (R.id.imageButton8) ;
 
         imageButton = (ImageButton) findViewById (R.id.imageButton12) ;
+
+        expandableListView = (ExpandableListView) findViewById (R.id.expanded_menu) ;
+
+        expandableListView.setGroupIndicator(null) ;
+
+        postcomment = (ImageButton) findViewById (R.id.imageButton21) ;
+
+        setItems() ;
+        setListener() ;
+
+
 
 
 
@@ -71,9 +95,22 @@ public class forum extends AppCompatActivity {
             @Override
             public void onClick (View theview ) {
 
-                openActivity2() ;
+                openActivity() ;
 
             }
+        });
+
+        postcomment.setOnClickListener( new View.OnClickListener(){
+
+            @Override
+            public void onClick (View theview) {
+                openActivity2() ;
+            }
+
+
+
+
+
         });
 
 
@@ -83,12 +120,91 @@ public class forum extends AppCompatActivity {
 
     }
 
-    public void openActivity2 () {
+    void setItems() {
+        ArrayList<String> header = new ArrayList<String> () ;
+
+        header.add ("What items does Lynen collect ?") ;
+        header.add ("What items does Lynen sell ?") ;
+        header.add ("How to locate the collection bin ?") ;
+        header.add ("How to purchase product using Lynen ?") ;
+        header.add ("Where to post question in Lynen ?") ;
+        header.add ("Where to make payment on the product that is purchased ?") ;
+
+
+
+
+        List<String> child1 = new ArrayList <String>() ;
+        child1.add ("Lynen collects recycle product that is available.") ;
+
+
+        List<String> child2 = new ArrayList <String>() ;
+        child2.add ("Lynen sells product that is made from recycle product.") ;
+
+        List <String> child3 = new ArrayList <String> () ;
+        child3.add ("The collection point can be located using the locate bin feature.") ;
+
+        List <String> child4 = new ArrayList <String> () ;
+        child4.add ("The product can be purchased at the product page.") ;
+
+        List <String> child5 = new ArrayList <String> () ;
+        child5.add ("The question can be posted at the forum page.") ;
+
+        List <String> child6 = new ArrayList <String> () ;
+        child6.add ("Payment of product can be made at the payment page. ") ;
+
+
+
+        HashMap<String, List<String>> hashMap = new HashMap <String, List <String> > () ;
+
+
+        hashMap.put (header.get(0), child1) ;
+        hashMap.put (header.get(1), child2) ;
+        hashMap.put (header.get(2), child3) ;
+        hashMap.put (header.get(4), child4) ;
+        hashMap.put (header.get(5), child5) ;
+
+        adapter = new ExpandableListAdapter (forum.this, header, hashMap ) ;
+
+        expandableListView.setAdapter (adapter) ;
+
+
+
+
+    }
+    void setListener () {
+
+
+        expandableListView.setOnGroupExpandListener (new ExpandableListView.OnGroupExpandListener() {
+
+            int previousGroup = -1 ;
+
+            @Override
+
+            public void onGroupExpand ( int groupPosition) {
+
+                if (groupPosition != previousGroup)
+                expandableListView.collapseGroup (previousGroup) ;
+                previousGroup = groupPosition ;
+
+            }
+
+
+        });
+    }
+
+    public void openActivity () {
 
         Intent intent = new Intent ( this, postforum.class) ;
 
         startActivity(intent) ;
 
+    }
+
+    public void openActivity2() {
+
+        Intent intent = new Intent ( this, backtocomment.class) ;
+
+        startActivity(intent) ;
     }
 
     public void  showMessage (String title , String Message ) {

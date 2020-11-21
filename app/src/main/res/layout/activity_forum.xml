@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="60dp"
     android:background="@drawable/forumpage"
     tools:context=".forum">
 
 
-    <RelativeLayout
+    <ScrollView
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -51,9 +52,10 @@
 
                             <ExpandableListView
                                 android:id="@+id/expanded_menu"
-                                android:layout_width="336dp"
-                                android:layout_height="281dp"
-                                android:layout_marginLeft="30dp" />
+                                android:layout_width="308dp"
+                                android:layout_height="261dp"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="30dp" />
 
 
                         </FrameLayout>
@@ -63,7 +65,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="331dp"
+                android:layout_height="350dp"
                 android:orientation="vertical">
 
                 <ScrollView
@@ -88,14 +90,15 @@
                             <ImageView
                                 android:id="@+id/imageView8"
                                 android:layout_width="match_parent"
-                                android:layout_height="304dp"
+                                android:layout_height="318dp"
                                 app:srcCompat="@drawable/rectangle58" />
 
                             <ImageButton
                                 android:id="@+id/imageButton8"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginLeft="100dp"
                                 android:background="@null"
                                 app:srcCompat="@drawable/rectangle96" />
 
@@ -103,7 +106,8 @@
                                 android:id="@+id/textView"
                                 android:layout_width="56dp"
                                 android:layout_height="30dp"
-                                android:layout_gravity="center"
+                                android:layout_marginTop="60dp"
+                                android:layout_marginLeft="160dp"
                                 android:text="Forum" />
 
                             <ImageButton
@@ -115,12 +119,30 @@
                                 android:background="@null"
                                 app:srcCompat="@drawable/roundbutton" />
 
+                            <ImageButton
+                                android:id="@+id/imageButton21"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="130dp"
+                                android:layout_marginLeft="100dp"
+                                android:background="@null"
+
+                                app:srcCompat="@drawable/rectangle96" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="111dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="130dp"
+                                android:layout_marginTop="160dp"
+                                android:text="Post Comment" />
+
                         </FrameLayout>
                     </LinearLayout>
                 </ScrollView>
             </LinearLayout>
 
         </LinearLayout>
-    </RelativeLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
