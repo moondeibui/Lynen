@@ -87,7 +87,7 @@ public class ShowCapturedActivity extends AppCompatActivity {
                 String material = clothesMaterialSpinner.getSelectedItem().toString();
                 String binLocation = clothesBinLocationSpinner.getSelectedItem().toString();
                 String gender = clothesGenderSpinner.getSelectedItem().toString();
-                boolean isInserted = myDb.insertData(type,material,binLocation,gender,imageInByte);
+                boolean isInserted = myDb.insertDataClothes(type,material,binLocation,gender,imageInByte);
                 if (isInserted == true){
                     Toast.makeText(ShowCapturedActivity.this, "Submitted!", Toast.LENGTH_LONG).show();
                 } else {
