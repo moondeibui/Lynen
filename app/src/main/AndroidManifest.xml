@@ -59,14 +59,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ShowCapturedActivity"
-            android:parentActivityName=".MainActivity" />
+            android:name=".RecycleClothes">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity
-            android:name=".RecycleClothes"
-            android:parentActivityName=".MainActivity" />
+            android:name=".ShowCapturedActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.INSERT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity
-            android:name=".LocateLynenBin"
-            android:parentActivityName=".MainActivity" />
+            android:name=".LocateLynenBin">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

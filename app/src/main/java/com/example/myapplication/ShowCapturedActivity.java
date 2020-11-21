@@ -29,7 +29,8 @@ public class ShowCapturedActivity extends AppCompatActivity {
     ClothesTypeSpinnerActivity clothesTypeSpinnerActivity;
     ClothesMaterialSpinnerActivity clothesMaterialSpinnerActivity;
     ClothesGenderSpinnerActivity clothesGenderSpinnerActivity;
-    Spinner clothesTypeSpinner, clothesMaterialSpinner, clothesGenderSpinner;
+    ClothesBinLocationSpinnerActivity clothesBinLocationSpinnerActivity;
+    Spinner clothesTypeSpinner, clothesMaterialSpinner, clothesGenderSpinner, clothesBinLocationSpinner;
     ImageButton submitButton;
 
     @Override
@@ -84,8 +85,9 @@ public class ShowCapturedActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int id) {
                 String type = clothesTypeSpinner.getSelectedItem().toString();
                 String material = clothesMaterialSpinner.getSelectedItem().toString();
+                String binLocation = clothesBinLocationSpinner.getSelectedItem().toString();
                 String gender = clothesGenderSpinner.getSelectedItem().toString();
-                boolean isInserted = myDb.insertData(type,material,gender,imageInByte);
+                boolean isInserted = myDb.insertData(type,material,binLocation,gender,imageInByte);
                 if (isInserted == true){
                     Toast.makeText(ShowCapturedActivity.this, "Submitted!", Toast.LENGTH_LONG).show();
                 } else {
@@ -96,6 +98,8 @@ public class ShowCapturedActivity extends AppCompatActivity {
         });
         builder2.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
+                Intent intent = new Intent(ShowCapturedActivity.this, MainActivity.class);
+                startActivity(intent);
                 dialog.cancel();
             }
         });
@@ -122,6 +126,16 @@ public class ShowCapturedActivity extends AppCompatActivity {
                 R.array.clothes_material_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         clothesMaterialSpinner.setAdapter(adapter2);
+
+        /*Clothes Bin Location Spinner*/
+        clothesBinLocationSpinnerActivity = new ClothesBinLocationSpinnerActivity();
+
+        clothesBinLocationSpinner = findViewById(R.id.clothes_bin_location_spinner);
+        clothesBinLocationSpinner.setOnItemSelectedListener(clothesBinLocationSpinnerActivity);
+        ArrayAdapter<CharSequence> adapter4 = ArrayAdapter.createFromResource(this,
+                R.array.clothes_bin_location_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        clothesBinLocationSpinner.setAdapter(adapter4);
 
 
         /*Clothes Gender Spinner*/
@@ -180,6 +194,19 @@ public class ShowCapturedActivity extends AppCompatActivity {
     }
 
     public class ClothesGenderSpinnerActivity extends Activity implements AdapterView.OnItemSelectedListener {
+
+        public void onItemSelected(AdapterView<?> parent, View view,
+                                   int pos, long id) {
+            // An item was selected. You can retrieve the selected item using
+            // parent.getItemAtPosition(pos)
+        }
+
+        public void onNothingSelected(AdapterView<?> parent) {
+            // Another interface callback
+        }
+    }
+
+    public class ClothesBinLocationSpinnerActivity extends Activity implements AdapterView.OnItemSelectedListener {
 
         public void onItemSelected(AdapterView<?> parent, View view,
                                    int pos, long id) {
