@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="clothes_bin_location_array">
+        <item>Family Mart Bin</item>
+        <item>Rock Cafe Bin</item>
+        <item>FishBowl Bin</item>
+        <item>Impulse Gaming Bin</item>
+        <item>Pyramid Bin</item>
+    </string-array>
+</resources>
