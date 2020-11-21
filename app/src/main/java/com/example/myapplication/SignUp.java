@@ -32,7 +32,7 @@ public class SignUp extends AppCompatActivity {
             if (password.getText().toString().equals("admin") &&
                     cpassword.getText().toString().equals("admin")){
                 AlertDialog.Builder builder = new AlertDialog.Builder(
-                        SignUp.this
+                        SignUp.this,R.style.AlertDialogTheme
                 );
 
                 builder.setIcon(R.drawable.ic_check_circle);

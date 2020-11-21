@@ -27,7 +27,7 @@ public class ProductNameClay extends AppCompatActivity {
         checkout2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ProductNameClay.this, PaymentBlue.class);
+                Intent intent = new Intent(ProductNameClay.this, PaymentClay.class);
                 startActivity(intent);
             }
         });

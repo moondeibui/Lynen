@@ -11,27 +11,27 @@
         android:id="@+id/activity_payment_blue"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="-33dp">
+        tools:layout_editor_absoluteX="-29dp"
+        tools:layout_editor_absoluteY="-311dp">
 
         <ImageView
             android:id="@+id/product_Image"
             android:layout_width="203dp"
             android:layout_height="165dp"
             android:contentDescription="@string/product_image_blue"
+            android:src="@drawable/blue_main"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.104"
-            android:src="@drawable/blue_main" />
+            app:layout_constraintVertical_bias="0.104" />
 
         <TextView
             android:id="@+id/product_Name"
             android:layout_width="114dp"
             android:layout_height="28dp"
             android:fontFamily="sans-serif-black"
-            android:text="@string/product_name_1"
+            android:text="@string/product_name"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -52,17 +52,20 @@
             app:layout_constraintVertical_bias="0.079"
             app:srcCompat="@drawable/paypal" />
 
-<EditText
-        android:id="@+id/input_card_Num"
+        <EditText
+            android:id="@+id/input_card_Num"
             android:layout_width="234dp"
             android:layout_height="45dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginLeft="50dp"
             android:layout_marginBottom="4dp"
+            android:autofillHints="@string/card_Num"
             android:hint="@string/card_Num"
             android:inputType="number"
             app:layout_constraintBottom_toTopOf="@+id/card_Date"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.271"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/card_Detail"
@@ -97,9 +100,7 @@
             android:layout_width="155dp"
             android:layout_height="46dp"
             android:layout_marginStart="40dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="476dp"
-            android:autofillHints=""
+            android:autofillHints="MM/YYYY"
             android:ems="10"
             android:fontFamily="sans-serif"
             android:hint="@string/mm_yyyy"
@@ -107,16 +108,18 @@
             android:textColor="#79121212"
             android:textIsSelectable="false"
             android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/input_CVC"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.696" />
 
         <EditText
             android:id="@+id/input_CVC"
-            android:layout_width="157dp"
-            android:layout_height="46dp"
-            android:autofillHints=""
+            android:layout_width="152dp"
+            android:layout_height="45dp"
+            android:autofillHints="CVC"
             android:ems="10"
             android:hint="@string/cvc"
             android:inputType="number"
@@ -124,10 +127,10 @@
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.877"
+            app:layout_constraintHorizontal_bias="0.81"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.694" />
+            app:layout_constraintVertical_bias="0.695" />
 
         <EditText
             android:id="@+id/input_card_Name"
