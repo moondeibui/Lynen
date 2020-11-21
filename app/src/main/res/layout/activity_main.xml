@@ -12,7 +12,6 @@
             android:id="@+id/main_pg_main_linear_layout_1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
             android:layout_marginTop="60dp"
             android:orientation="vertical">
 
@@ -27,6 +26,7 @@
                     android:id="@+id/main_page_recycle_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
                     android:background="@null"
                     android:src="@drawable/recycle_button">
                 </ImageButton>
@@ -37,7 +37,7 @@
                 android:id="@+id/main_pg_sub_linear_layout_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_margin="20dp"
                 android:orientation="horizontal">
 
                 <ImageButton
@@ -45,16 +45,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@null"
-                    android:src="@drawable/rectangle_10">
+                    android:src="@drawable/locate_button">
                 </ImageButton>
 
                 <ImageButton
                     android:id="@+id/main_page_product_btn"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
                     android:background="@null"
-                    android:src="@drawable/rectangle_11"></ImageButton>
+                    android:src="@drawable/product_button">
+                </ImageButton>
 
             </LinearLayout>
 
@@ -69,9 +69,9 @@
                     android:id="@+id/main_page_community_faqs_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="5dp"
                     android:background="@null"
-                    android:src="@drawable/rectangle_41">
+                    android:src="@drawable/community_button">
                 </ImageButton>
 
             </LinearLayout>
@@ -80,7 +80,7 @@
                 android:id="@+id/main_pg_sub_linear_layout_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_margin="20dp"
                 android:orientation="horizontal">
 
                 <ImageButton
@@ -88,16 +88,33 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@null"
-                    android:src="@drawable/rectangle_10">
+                    android:src="@drawable/statistics">
                 </ImageButton>
 
                 <ImageButton
                     android:id="@+id/main_page_adopt_bin_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/adopt_bin">
+                </ImageButton>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_pg_sub_linear_layout_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/main_page_login_signup_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:background="@null"
-                    android:src="@drawable/rectangle_11">
+                    android:src="@drawable/login_signup">
                 </ImageButton>
 
             </LinearLayout>
