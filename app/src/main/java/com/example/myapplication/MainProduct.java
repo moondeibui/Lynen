@@ -15,7 +15,6 @@ public class MainProduct extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_btn);
-
         blue = findViewById(R.id.product_image_blue);
         white =  findViewById(R.id.product_image_white);
         clay = findViewById(R.id.product_image_clay);
