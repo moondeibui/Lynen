@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/forumpage"
     tools:context=".forum">
 
 
-    <ScrollView
-        android:id="@+id/main_pg_main_linear_layout"
+    <RelativeLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/forumpage"
         android:orientation="vertical">
 
         <LinearLayout
@@ -61,12 +61,6 @@
                 </ScrollView>
             </LinearLayout>
 
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/communitylabel" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="331dp"
@@ -74,12 +68,18 @@
 
                 <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="497dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical" >
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/communitylabel" />
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -95,8 +95,8 @@
                                 android:id="@+id/imageButton8"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background= "@null"
                                 android:layout_gravity="center"
+                                android:background="@null"
                                 app:srcCompat="@drawable/rectangle96" />
 
                             <TextView
@@ -110,9 +110,9 @@
                                 android:id="@+id/imageButton12"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="@null"
-                                android:layout_marginLeft="250dp"
                                 android:layout_gravity="bottom"
+                                android:layout_marginLeft="250dp"
+                                android:background="@null"
                                 app:srcCompat="@drawable/roundbutton" />
 
                         </FrameLayout>
@@ -121,6 +121,6 @@
             </LinearLayout>
 
         </LinearLayout>
-    </ScrollView>
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

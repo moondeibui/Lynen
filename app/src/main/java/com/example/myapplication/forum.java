@@ -13,7 +13,7 @@ public class forum extends AppCompatActivity {
 
     DatabaseHelper myDb;
 
-    private ImageButton imageButton ;
+    ImageButton imageButton ;
 
     ImageButton forum ;
 
@@ -47,7 +47,7 @@ public class forum extends AppCompatActivity {
                 while ( res.moveToNext()) {
                     buffer.append ("ID " + res.getString(0) +"\n") ;
                     buffer.append ("Thread_title " + res.getString (1) +"\n") ;
-                    buffer.append ("Thread" + res.getString (3) + "\n") ;
+                    buffer.append ("Thread" + res.getString (2) + "\n") ;
                 }
 
                 showMessage("Forum", buffer.toString()) ;

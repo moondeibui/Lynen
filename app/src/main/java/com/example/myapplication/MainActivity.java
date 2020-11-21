@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
         product = findViewById(R.id.main_page_product_btn);
         forum = findViewById(R.id.main_page_community_faqs_btn);
         adoptbin = findViewById (R.id.main_page_adopt_bin_btn);
-//
+
 //        @Override
-//        protected void onStart () {
+//        protected void onStart(){
 //            super.onStart();
 
             recycleClothes.setOnClickListener(new View.OnClickListener() {
@@ -56,12 +56,14 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick (View view){
                     Intent intent = new Intent (MainActivity.this, forum.class);
+                    startActivity(intent);
                 }
             });
             adoptbin.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent (MainActivity.this, adoptbin.class);
+                    startActivity(intent);
                 }
             });
 

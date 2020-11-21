@@ -23,12 +23,12 @@ public class Second2Fragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        view.findViewById(R.id.button_second).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(Second2Fragment.this)
-                        .navigate(R.id.action_Second2Fragment_to_First2Fragment);
-            }
-        });
+//        view.findViewById(R.id.button_second).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                NavHostFragment.findNavController(Second2Fragment.this)
+//                        .navigate(R.id.action_Second2Fragment_to_First2Fragment);
+//            }
+//        });
     }
 }
