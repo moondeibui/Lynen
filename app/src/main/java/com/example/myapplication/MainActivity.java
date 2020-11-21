@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    public ImageButton recycleClothes, locateBin, product;
+    public ImageButton recycleClothes, locateBin, product, statistics,login;;
     public ImageButton forum;
     public ImageButton adoptbin;
 
@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         product = findViewById(R.id.main_page_product_btn);
         forum = findViewById(R.id.main_page_community_faqs_btn);
         adoptbin = findViewById (R.id.main_page_adopt_bin_btn);
+        statistics = findViewById(R.id.main_page_statistics_btn);
+        login = findViewById(R.id.main_page_login_signup_btn);
 
 //        @Override
 //        protected void onStart(){
@@ -67,7 +69,21 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
+        statistics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, StatisticsMalaysia.class);
+                startActivity(intent);
+            }
+        });
 
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, loginPage.class);
+                startActivity(intent);
+            }
+        });
         }
 }
 

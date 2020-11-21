@@ -34,7 +34,7 @@ public class loginPage extends AppCompatActivity {
                 if (etUsername.getText().toString().equals("admin") &&
                 etPassword.getText().toString().equals("admin")){
                     AlertDialog.Builder builder = new AlertDialog.Builder(
-                            loginPage.this
+                            loginPage.this, R.style.AlertDialogTheme
                     );
 
                     builder.setIcon(R.drawable.ic_check_circle);
