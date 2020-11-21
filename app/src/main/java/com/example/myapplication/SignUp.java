@@ -32,18 +32,17 @@ public class SignUp extends AppCompatActivity {
             if (password.getText().toString().equals("admin") &&
                     cpassword.getText().toString().equals("admin")){
                 AlertDialog.Builder builder = new AlertDialog.Builder(
-                        SignUp.this
+                        SignUp.this, R.style.AlertDialogTheme
                 );
 
                 builder.setIcon(R.drawable.ic_check_circle);
                 builder.setTitle("Sign Up Successfully!!!!");
                 builder.setMessage("Welcome");
 
-                builder.setNegativeButton("OK", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton("Login", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(SignUp.this, MainActivity.class);
-                        startActivity(intent);
+                        startActivity(new Intent(SignUp.this, MainActivity.class));
                     }
                 });
                 AlertDialog alertDialog = builder.create();

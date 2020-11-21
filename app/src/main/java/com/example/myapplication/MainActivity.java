@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    public ImageButton recycleClothes, locateBin, product, statistics;
+    public ImageButton recycleClothes, locateBin, product, statistics,login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         locateBin = findViewById(R.id.main_page_locate_btn);
         product = findViewById(R.id.main_page_product_btn);
         statistics = findViewById(R.id.main_page_statistics_btn);
+        login = findViewById(R.id.main_page_login_signup_btn);
     }
 
     @Override
@@ -54,6 +55,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, StatisticsMalaysia.class);
+                startActivity(intent);
+            }
+        });
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, loginPage.class);
                 startActivity(intent);
             }
         });
