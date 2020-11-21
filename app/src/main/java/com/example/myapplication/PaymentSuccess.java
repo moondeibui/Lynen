@@ -3,35 +3,35 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import android.os.Bundle;
+public class PaymentSuccess extends AppCompatActivity {
 
-public class ProductNameBlue extends AppCompatActivity {
-
-    public Button checkout;
-
+    public Button homePage1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product_blue);
+        setContentView(R.layout.activity_payment_success);
 
-        checkout = findViewById(R.id.check_out);
+
+        homePage1 = findViewById(R.id.payment_home);
+
     }
-
     @Override
     protected void onStart() {
         super.onStart();
 
-        checkout.setOnClickListener(new View.OnClickListener() {
+        homePage1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ProductNameBlue.this, PaymentBlue.class);
+                Intent intent = new Intent(PaymentSuccess.this, MainProduct.class);
                 startActivity(intent);
             }
         });
 
     }
+
 }

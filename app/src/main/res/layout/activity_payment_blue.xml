@@ -5,37 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background= "#eff0f4"
-    tools:context=".Payment">
+    tools:context=".PaymentBlue">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_payment_blue"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="37dp"
         tools:layout_editor_absoluteY="-33dp">
 
         <ImageView
-            android:id="@+id/product_Image_1"
+            android:id="@+id/product_Image"
             android:layout_width="203dp"
             android:layout_height="165dp"
-            android:contentDescription="@string/product_image_1"
+            android:contentDescription="@string/product_image_blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.104"
-            tools:srcCompat="@drawable/white_main" />
+            tools:srcCompat="@drawable/blue_main" />
 
         <TextView
-            android:id="@+id/product_Name_1"
+            android:id="@+id/product_Name"
             android:layout_width="114dp"
             android:layout_height="28dp"
             android:fontFamily="sans-serif-black"
-            android:text="@string/product_name_1"
+            android:text="@string/product_name"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/product_Image_1"
+            app:layout_constraintTop_toBottomOf="@+id/product_Image"
             app:layout_constraintVertical_bias="0.048" />
 
         <ImageButton
@@ -47,12 +48,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/product_Name_1"
+            app:layout_constraintTop_toBottomOf="@+id/product_Name"
             app:layout_constraintVertical_bias="0.079"
             app:srcCompat="@drawable/paypal" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/input_card_Num"
+<EditText
+        android:id="@+id/input_card_Num"
             android:layout_width="234dp"
             android:layout_height="45dp"
             android:layout_marginStart="50dp"
@@ -98,42 +99,44 @@
             android:layout_marginStart="40dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="476dp"
+            android:autofillHints=""
             android:ems="10"
+            android:fontFamily="sans-serif"
+            android:hint="@string/mm_yyyy"
             android:inputType="date"
-            android:text="@string/mm_yyyy"
             android:textColor="#79121212"
             android:textIsSelectable="false"
-            android:textSize="14sp"
+            android:textSize="12sp"
             app:layout_constraintEnd_toStartOf="@+id/input_CVC"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:autofillHints="" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/input_CVC"
             android:layout_width="157dp"
             android:layout_height="46dp"
+            android:autofillHints=""
             android:ems="10"
+            android:hint="@string/cvc"
             android:inputType="number"
-            android:text="@string/cvc"
             android:textColor="#85121212"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.811"
+            app:layout_constraintHorizontal_bias="0.877"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.694"
-            android:autofillHints="" />
+            app:layout_constraintVertical_bias="0.694" />
 
         <EditText
             android:id="@+id/input_card_Name"
             android:layout_width="236dp"
             android:layout_height="43dp"
+            android:autofillHints="John Doe"
             android:ems="10"
+            android:hint="@string/john_doe"
             android:inputType="textPersonName"
-            android:text="@string/card_Name"
             android:textColor="#7D070707"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -141,9 +144,7 @@
             app:layout_constraintHorizontal_bias="0.285"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/card_Date"
-            app:layout_constraintVertical_bias="0.254"
-            android:autofillHints="John Doe"
-            android:hint= "@string/john_doe"/>
+            app:layout_constraintVertical_bias="0.254" />
 
         <TextView
             android:id="@+id/card_Name"
@@ -158,18 +159,6 @@
             app:layout_constraintTop_toBottomOf="@+id/card_Date"
             app:layout_constraintVertical_bias="1.0" />
 
-        <ImageButton
-            android:id="@+id/card_PayNow_button"
-            android:layout_width="314dp"
-            android:layout_height="33dp"
-            android:contentDescription="@string/card_Pay"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.951"
-            app:srcCompat="@drawable/paynow_d2" />
-
         <View
             android:id="@+id/divider"
             android:layout_width="match_parent"
@@ -179,6 +168,19 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.512"
             tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/card_PayNow_button"
+            android:layout_width="324dp"
+            android:layout_height="44dp"
+            android:text="PAY NOW"
+            app:backgroundTint="#23CF26"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.551"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.959" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

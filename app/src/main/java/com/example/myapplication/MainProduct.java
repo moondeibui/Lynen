@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 
 public class MainProduct extends AppCompatActivity {
 
-    public ImageButton blue, white, clay;
+    public ImageButton blue, white, clay, mainhome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class MainProduct extends AppCompatActivity {
         blue = findViewById(R.id.product_image_blue);
         white =  findViewById(R.id.product_image_white);
         clay = findViewById(R.id.product_image_clay);
+        mainhome = findViewById(R.id.back_main);
     }
 
     @Override
@@ -35,7 +36,7 @@ public class MainProduct extends AppCompatActivity {
 
         white.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent intent = new Intent(MainProduct.this, ProductNameWhite.class);
                 startActivity(intent);
             }
@@ -48,5 +49,14 @@ public class MainProduct extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        mainhome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainProduct.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
